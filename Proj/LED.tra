@@ -1,0 +1,36 @@
+*** Creating Trace Output File 'LED.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"main.o"'
+### List of Objects: adding '"example_main.o"'
+### List of Objects: adding '"stm32f0xx_gpio.o"'
+### List of Objects: adding '"stm32f0xx_rcc.o"'
+### List of Objects: adding '"stm32f0xx_spi.o"'
+### List of Objects: adding '"stm32f0xx_usart.o"'
+### List of Objects: adding '"stm32f0xx_exti.o"'
+### List of Objects: adding '"stm32f0xx_i2c.o"'
+### List of Objects: adding '"stm32f0xx_misc.o"'
+### List of Objects: adding '"stm32f0xx_syscfg.o"'
+### List of Objects: adding '"led.o"'
+### List of Objects: adding '"delay.o"'
+### List of Objects: adding '"lis3dh_driver.o"'
+### List of Objects: adding '"spi_mems.o"'
+### List of Objects: adding '"stm320518_eval.o"'
+### List of Objects: adding '".\startup_stm32f0xx_ld.o"'
+### List of Objects: adding '"system_stm32f0xx.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M0 "main.o" "example_main.o" "stm32f0xx_gpio.o" "stm32f0xx_rcc.o" "stm32f0xx_spi.o" "stm32f0xx_usart.o" "stm32f0xx_exti.o" "stm32f0xx_i2c.o" "stm32f0xx_misc.o" "stm32f0xx_syscfg.o" "led.o" "delay.o" "lis3dh_driver.o" "spi_mems.o" "stm320518_eval.o" ".\startup_stm32f0xx_ld.o" "system_stm32f0xx.o" 
+--library_type=microlib --strict --scatter "LED.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\LED.map" -o LED.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'LED.axf'
+### ADS-LD Command File: 'LED.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'LED.lnp', Handle=0x00000F30
+### Writing '.lnp' file
+### ADS-LD Command file 'LED.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

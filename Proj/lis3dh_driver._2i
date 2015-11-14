@@ -1,0 +1,4 @@
+--feedback "LED.fed" -c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I..\ST_Lib\incs -I..\ST_Lib\inc -I..\ST_Lib\src -I..\System\CMSIS -I..\System\startup -I..\User -I..\My_Lib\delay -I..\My_Lib\LED -I..\My_Lib\lis3dh -I..\ST_Lib\Communication 
+-I D:\shumb\keil46\ARM\RV31\INC 
+-I D:\shumb\keil46\ARM\CMSIS\Include 
+-DUSE_STDPERIPH_DRIVER -DSTM32F0XX_LD -o "lis3dh_driver.o" --omf_browse "lis3dh_driver.crf" --depend "lis3dh_driver.d" "..\My_Lib\lis3dh\lis3dh_driver.c"

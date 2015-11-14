@@ -1,0 +1,7 @@
+--cpu Cortex-M0 "main.o" "example_main.o" "stm32f0xx_gpio.o" "stm32f0xx_rcc.o" "stm32f0xx_spi.o" "stm32f0xx_usart.o" "stm32f0xx_exti.o" "stm32f0xx_i2c.o" "stm32f0xx_misc.o" "stm32f0xx_syscfg.o" "led.o" "delay.o" "lis3dh_driver.o" "spi_mems.o" "stm320518_eval.o" ".\startup_stm32f0xx_ld.o" "system_stm32f0xx.o" 
+--library_type=microlib 
+--feedback "LED.fed" --feedback_image=none 
+--strict --scatter "LED.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\LED.map" -o LED.axf
