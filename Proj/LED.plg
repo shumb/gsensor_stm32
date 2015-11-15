@@ -60,3 +60,18 @@ Load "E:\\work\\gsensor_stm32\\Proj\\LED.AXF"
 Erase Done.
 Programming Done.
 Verify OK.
+Build target 'gsensor_stm32'
+compiling main.c...
+compiling example_main.c...
+..\User\example_main.c(83): warning:  #223-D: function "USART_init" declared implicitly
+..\User\example_main.c(107): warning:  #192-D: unrecognized character escape sequence
+..\User\example_main.c(115): warning:  #192-D: unrecognized character escape sequence
+..\User\example_main.c(75): warning:  #177-D: variable "buffer" was declared but never referenced
+linking...
+Program Size: Code=14412 RO-data=332 RW-data=104 ZI-data=1048  
+FromELF: creating hex file...
+"LED.axf" - 0 Error(s), 4 Warning(s).
+Load "E:\\work\\gsensor_stm32\\Proj\\LED.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.

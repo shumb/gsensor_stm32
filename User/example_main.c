@@ -70,7 +70,7 @@ void EKSTM32_LEDOff(int Led)
 * Output         : None.
 * Return         : None.
 *******************************************************************************/
-int g_main(void)
+int main(void)
 {
   uint8_t buffer[26]; 
 //  uint8_t position=0, old_position=0;
@@ -80,7 +80,7 @@ int g_main(void)
   //function for MKI109V1 board 
  // InitHardware();
   SPI_Mems_Init();
-  
+  USART_init();
 //  EKSTM32_LEDOff(LED1);
 //  EKSTM32_LEDOff(LED2);
 //  EKSTM32_LEDOff(LED3);    
@@ -92,28 +92,35 @@ int g_main(void)
   //set ODR (turn ON device)
   response = LIS3DH_SetODR(LIS3DH_ODR_100Hz);
   if(response==1){
-        sprintf((char*)buffer,"\n\rSET_ODR_OK    \n\r\0");
+ //       sprintf((char*)buffer,"\n\rSET_ODR_OK    \n\r\0");
+		printf("\n\rSET_ODR_OK    \n\r\0");
  //       USB_SIL_Write(EP1_IN, buffer, 19);
  //       SetEPTxValid(ENDP1);
-  }
+  }else{
+		printf("\n\rSET_ODR_FAIL!!!    \n\r\0");
+		return 0;
+	}
   //set PowerMode 
   response = LIS3DH_SetMode(LIS3DH_NORMAL);
   if(response==1){
-        sprintf((char*)buffer,"SET_MODE_OK     \n\r\0");
+		//sprintf((char*)buffer,"SET_MODE_OK     \n\r\0");
+		printf("\n\SET_MODE_OK    \n\r\0");
  //       USB_SIL_Write(EP1_IN, buffer, 19);
  //       SetEPTxValid(ENDP1);
   }
   //set Fullscale
   response = LIS3DH_SetFullScale(LIS3DH_FULLSCALE_2);
   if(response==1){
-        sprintf((char*)buffer,"SET_FULLSCALE_OK\n\r\0");
+        //sprintf((char*)buffer,"SET_FULLSCALE_OK\n\r\0");
+		printf("\n\SET_FULLSCALE_OK\n\r\0");
  //       USB_SIL_Write(EP1_IN, buffer, 19);
  //       SetEPTxValid(ENDP1);
   }
   //set axis Enable
   response = LIS3DH_SetAxis(LIS3DH_X_ENABLE | LIS3DH_Y_ENABLE | LIS3DH_Z_ENABLE);
   if(response==1){
-        sprintf((char*)buffer,"SET_AXIS_OK     \n\r\0");
+        //sprintf((char*)buffer,"SET_AXIS_OK     \n\r\0");
+		printf("SET_AXIS_OK     \n\r\0");
  //       USB_SIL_Write(EP1_IN, buffer, 19);
  //       SetEPTxValid(ENDP1);
   }
@@ -129,7 +136,8 @@ int g_main(void)
     //print data values
     //function for MKI109V1 board 
 //    EKSTM32_LEDToggle(LED1);
-    sprintf((char*)buffer, "X=%6d Y=%6d Z=%6d \r\n", data.AXIS_X, data.AXIS_Y, data.AXIS_Z);
+    //sprintf((char*)buffer, "X=%6d Y=%6d Z=%6d \r\n", data.AXIS_X, data.AXIS_Y, data.AXIS_Z);
+		printf("X=%6d Y=%6d Z=%6d \r\n", data.AXIS_X, data.AXIS_Y, data.AXIS_Z);
 //    USB_SIL_Write(EP1_IN, buffer, 29);
 //    SetEPTxValid(ENDP1);  
 //    old_position = position;
