@@ -77,7 +77,7 @@
 #endif
 
 #ifdef USE_SPI_1
- #define SPI_MEMS_CS             GPIO_Pin_4
+ #define SPI_MEMS_CS             GPIO_Pin_2
  #define SPI_MEMS_CS_GPIO        GPIOA
  #define SPI_MEMS_CS_GPIO_CLK    RCC_AHBPeriph_GPIOA
 #endif

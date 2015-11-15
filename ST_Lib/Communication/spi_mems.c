@@ -61,7 +61,8 @@ void SPI_Mems_Init(void)
 
 #ifdef USE_SPI_1
   /* Enable SPI and GPIO clocks */
-  RCC_APB2PeriphClockCmd(SPI_MEMS_CLK | SPI_MEMS_GPIO_CLK | SPI_MEMS_CS_GPIO_CLK, ENABLE);
+  RCC_APB2PeriphClockCmd(SPI_MEMS_CLK, ENABLE); 
+  RCC_AHBPeriphClockCmd(SPI_MEMS_GPIO_CLK | SPI_MEMS_CS_GPIO_CLK, ENABLE);
 #endif
  
 #ifdef USE_SPI_2
@@ -72,15 +73,18 @@ void SPI_Mems_Init(void)
   /* Configure SPI pins: SCK, MISO and MOSI */
   GPIO_InitStructure.GPIO_Pin = SPI_MEMS_PIN_SCK | SPI_MEMS_PIN_MISO | SPI_MEMS_PIN_MOSI;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
-  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+  GPIO_InitStructure.GPIO_PuPd  = GPIO_PuPd_UP;
+  
   GPIO_Init(SPI_MEMS_GPIO, &GPIO_InitStructure);
 
   /* Configure I/O for MEMS Chip select */
   GPIO_InitStructure.GPIO_Pin = SPI_MEMS_CS;
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
   GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
   GPIO_Init(SPI_MEMS_CS_GPIO, &GPIO_InitStructure);
 
   /* Deselect Mems Sensor: Chip Select high */
@@ -93,12 +97,14 @@ void SPI_Mems_Init(void)
   SPI_InitStructure.SPI_CPOL = SPI_CPOL_High;
   SPI_InitStructure.SPI_CPHA = SPI_CPHA_2Edge;
   SPI_InitStructure.SPI_NSS = SPI_NSS_Soft;
-  //SPI_InitStructure.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_32;
-  SPI_InitStructure.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_8;
+  SPI_InitStructure.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_2;
+
   SPI_InitStructure.SPI_FirstBit = SPI_FirstBit_MSB;
   SPI_InitStructure.SPI_CRCPolynomial = 7;
   SPI_Init(SPI_MEMS, &SPI_InitStructure);
 
+  SPI_RxFIFOThresholdConfig(SPI_MEMS, SPI_RxFIFOThreshold_QF);
+  
   /* Enable the SPI  */
   SPI_Cmd(SPI_MEMS, ENABLE);
 }

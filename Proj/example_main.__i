@@ -1,0 +1,6 @@
+-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I..\ST_Lib\incs -I..\ST_Lib\inc -I..\ST_Lib\src -I..\System\CMSIS -I..\System\startup -I..\User -I..\My_Lib\delay -I..\My_Lib\LED -I..\My_Lib\lis3dh -I..\ST_Lib\Communication 
+-I E:\work\keil\keil-46\ARM\RV31\INC 
+-I E:\work\keil\keil-46\ARM\CMSIS\Include 
+-I E:\work\keil\keil-46\ARM\Inc\ST\STM32F0xx 
+-DUSE_STDPERIPH_DRIVER -DSTM32F0XX_LD -DSTM32F030X6 
+-o "example_main.o" --omf_browse "example_main.crf" --depend "example_main.d" "..\User\example_main.c"

@@ -72,7 +72,8 @@ void EKSTM32_LEDOff(int Led)
 *******************************************************************************/
 int main(void)
 {
-  uint8_t buffer[26]; 
+	uint8_t val = 0;
+//  uint8_t buffer[26]; 
 //  uint8_t position=0, old_position=0;
   AxesRaw_t data;
   //Initialize your hardware here
@@ -89,6 +90,14 @@ int main(void)
 //  while(bDeviceState != CONFIGURED);
  
   //Inizialize MEMS Sensor
+	response = LIS3DH_GetWHO_AM_I(&val);
+	if(response==1){
+		printf("\n\rGetWHO_AM_I OK   \n\r\0");
+  }else{
+		printf("\n\rGetWHO_AM_I FAIL!!!    \n\r\0");
+	}
+	printf("\n\rGetWHO_AM_I: Val=0x%x    \n\r\0",val);
+	
   //set ODR (turn ON device)
   response = LIS3DH_SetODR(LIS3DH_ODR_100Hz);
   if(response==1){

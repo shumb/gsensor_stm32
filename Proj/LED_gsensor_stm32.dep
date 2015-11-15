@@ -36,7 +36,7 @@ I (E:\work\keil\keil-46\ARM\ARMCC\bin\..\include\stdio.h)(0x4EB0D286)
 I (E:\work\keil\keil-46\ARM\ARMCC\bin\..\include\string.h)(0x4EB0D286)
 I (..\ST_Lib\Communication\stm320518_eval.h)(0x5647F026)
 I (..\ST_Lib\Communication\stm32_eval_legacy.h)(0x5647F026)
-F (..\User\example_main.c)(0x5647FC65)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I..\ST_Lib\incs -I..\ST_Lib\inc -I..\ST_Lib\src -I..\System\CMSIS -I..\System\startup -I..\User -I..\My_Lib\delay -I..\My_Lib\LED -I..\My_Lib\lis3dh -I..\ST_Lib\Communication -I E:\work\keil\keil-46\ARM\RV31\INC -I E:\work\keil\keil-46\ARM\CMSIS\Include -I E:\work\keil\keil-46\ARM\Inc\ST\STM32F0xx -DUSE_STDPERIPH_DRIVER -DSTM32F0XX_LD -DSTM32F030X6 -o "example_main.o" --omf_browse "example_main.crf" --depend "example_main.d")
+F (..\User\example_main.c)(0x564850C1)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I..\ST_Lib\incs -I..\ST_Lib\inc -I..\ST_Lib\src -I..\System\CMSIS -I..\System\startup -I..\User -I..\My_Lib\delay -I..\My_Lib\LED -I..\My_Lib\lis3dh -I..\ST_Lib\Communication -I E:\work\keil\keil-46\ARM\RV31\INC -I E:\work\keil\keil-46\ARM\CMSIS\Include -I E:\work\keil\keil-46\ARM\Inc\ST\STM32F0xx -DUSE_STDPERIPH_DRIVER -DSTM32F0XX_LD -DSTM32F030X6 -o "example_main.o" --omf_browse "example_main.crf" --depend "example_main.d")
 I (..\System\CMSIS\stm32f0xx.h)(0x5647F026)
 I (..\System\CMSIS\core_cm0.h)(0x5647F026)
 I (E:\work\keil\keil-46\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB0D284)
@@ -66,7 +66,7 @@ I (..\ST_Lib\inc\stm32f0xx_usart.h)(0x5647F026)
 I (..\ST_Lib\inc\stm32f0xx_wwdg.h)(0x5647F026)
 I (..\ST_Lib\inc\stm32f0xx_misc.h)(0x5647F026)
 I (E:\work\keil\keil-46\ARM\ARMCC\bin\..\include\string.h)(0x4EB0D286)
-I (..\ST_Lib\Communication\spi_mems.h)(0x5647F026)
+I (..\ST_Lib\Communication\spi_mems.h)(0x56483BD5)
 I (..\User\platform_config.h)(0x5647F026)
 I (E:\work\keil\keil-46\ARM\ARMCC\bin\..\include\stdio.h)(0x4EB0D286)
 I (..\My_Lib\lis3dh\lis3dh_driver.h)(0x5647F025)
@@ -304,7 +304,7 @@ I (..\ST_Lib\inc\stm32f0xx_tim.h)(0x5647F026)
 I (..\ST_Lib\inc\stm32f0xx_usart.h)(0x5647F026)
 I (..\ST_Lib\inc\stm32f0xx_wwdg.h)(0x5647F026)
 I (..\ST_Lib\inc\stm32f0xx_misc.h)(0x5647F026)
-F (..\ST_Lib\Communication\spi_mems.h)(0x5647F026)()
+F (..\ST_Lib\Communication\spi_mems.h)(0x56483BD5)()
 F (..\My_Lib\LED\led.c)(0x5647F025)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I..\ST_Lib\incs -I..\ST_Lib\inc -I..\ST_Lib\src -I..\System\CMSIS -I..\System\startup -I..\User -I..\My_Lib\delay -I..\My_Lib\LED -I..\My_Lib\lis3dh -I..\ST_Lib\Communication -I E:\work\keil\keil-46\ARM\RV31\INC -I E:\work\keil\keil-46\ARM\CMSIS\Include -I E:\work\keil\keil-46\ARM\Inc\ST\STM32F0xx -DUSE_STDPERIPH_DRIVER -DSTM32F0XX_LD -DSTM32F030X6 -o "led.o" --omf_browse "led.crf" --depend "led.d")
 I (..\My_Lib\LED\led.h)(0x5647F025)
 I (..\User\ALL_Includes.h)(0x5647F026)
@@ -373,8 +373,8 @@ I (..\My_Lib\delay\delay.h)(0x5647F025)
 I (..\My_Lib\LED\led.h)(0x5647F025)
 F (..\My_Lib\lis3dh\lis3dh_driver.c)(0x5647F025)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I..\ST_Lib\incs -I..\ST_Lib\inc -I..\ST_Lib\src -I..\System\CMSIS -I..\System\startup -I..\User -I..\My_Lib\delay -I..\My_Lib\LED -I..\My_Lib\lis3dh -I..\ST_Lib\Communication -I E:\work\keil\keil-46\ARM\RV31\INC -I E:\work\keil\keil-46\ARM\CMSIS\Include -I E:\work\keil\keil-46\ARM\Inc\ST\STM32F0xx -DUSE_STDPERIPH_DRIVER -DSTM32F0XX_LD -DSTM32F030X6 -o "lis3dh_driver.o" --omf_browse "lis3dh_driver.crf" --depend "lis3dh_driver.d")
 I (..\My_Lib\lis3dh\lis3dh_driver.h)(0x5647F025)
-F (..\ST_Lib\Communication\spi_mems.c)(0x5647F026)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I..\ST_Lib\incs -I..\ST_Lib\inc -I..\ST_Lib\src -I..\System\CMSIS -I..\System\startup -I..\User -I..\My_Lib\delay -I..\My_Lib\LED -I..\My_Lib\lis3dh -I..\ST_Lib\Communication -I E:\work\keil\keil-46\ARM\RV31\INC -I E:\work\keil\keil-46\ARM\CMSIS\Include -I E:\work\keil\keil-46\ARM\Inc\ST\STM32F0xx -DUSE_STDPERIPH_DRIVER -DSTM32F0XX_LD -DSTM32F030X6 -o "spi_mems.o" --omf_browse "spi_mems.crf" --depend "spi_mems.d")
-I (..\ST_Lib\Communication\spi_mems.h)(0x5647F026)
+F (..\ST_Lib\Communication\spi_mems.c)(0x56483A38)(-c --cpu Cortex-M0 -D__MICROLIB -g -O0 --apcs=interwork -I..\ST_Lib\incs -I..\ST_Lib\inc -I..\ST_Lib\src -I..\System\CMSIS -I..\System\startup -I..\User -I..\My_Lib\delay -I..\My_Lib\LED -I..\My_Lib\lis3dh -I..\ST_Lib\Communication -I E:\work\keil\keil-46\ARM\RV31\INC -I E:\work\keil\keil-46\ARM\CMSIS\Include -I E:\work\keil\keil-46\ARM\Inc\ST\STM32F0xx -DUSE_STDPERIPH_DRIVER -DSTM32F0XX_LD -DSTM32F030X6 -o "spi_mems.o" --omf_browse "spi_mems.crf" --depend "spi_mems.d")
+I (..\ST_Lib\Communication\spi_mems.h)(0x56483BD5)
 I (..\System\CMSIS\stm32f0xx.h)(0x5647F026)
 I (..\System\CMSIS\core_cm0.h)(0x5647F026)
 I (E:\work\keil\keil-46\ARM\ARMCC\bin\..\include\stdint.h)(0x4EB0D284)
